@@ -1,0 +1,13 @@
+<div *ngIf="users!=null; else espera">
+  <table border="1">
+    <tr>
+      <td>Codigo</td><td>Descripcion</td><td>Precio</td>
+    </tr>
+    <tr *ngFor="let usr of users">
+      <td>{{usr.id}}</td>
+      <td>{{usr.user}}</td>
+      <td>{{usr.pass}}</td>
+    </tr>
+  </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
